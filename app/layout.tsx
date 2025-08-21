@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Coffee, Github } from 'lucide-react';
 import localFont from 'next/font/local';
-import Link from 'next/link';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 
 const Nacelle = localFont({
@@ -23,28 +22,20 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${Nacelle.variable} no-scrollbar flex h-screen w-screen flex-col justify-between border-2 p-3.75 font-nacelle antialiased`}
+        className={`${Nacelle.variable} no-scrollbar h-screen w-screen bg-background font-nacelle antialiased`}
       >
-        <div className='flex items-center justify-between px-2'>
-          <Link className='flex gap-2' href='/'>
-            <Coffee size={22} />
-            <span>Next_starter</span>
-          </Link>
-          <Link href={'https://github.com/Yash0z/Next_starter'}>
-            <Github size={18} />
-          </Link>
-        </div>
-        <main className='my-4 h-full'>{children}</main>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          disableTransitionOnChange
+          enableSystem
+        >
+          <main className='flex h-full w-full flex-col justify-between'>
+            {children}
+          </main>
+        </ThemeProvider>
+
         <Toaster />
-        <div className='flex justify-end px-2'>
-          <span className='text-muted-foreground/50 text-xs'>Site by</span>
-          <Link
-            className='text-xs underline'
-            href={'https://github.com/Yash0z'}
-          >
-            Its.y4sh
-          </Link>
-        </div>
       </body>
     </html>
   );
