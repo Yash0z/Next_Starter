@@ -161,7 +161,7 @@
 
 ::selection {
   background-color: black;
-  color: white;
+  color: rgb(255, 95, 226);
 }
 
 @layer base {
