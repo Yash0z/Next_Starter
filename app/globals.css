@@ -69,8 +69,8 @@
   --popover: oklch(0.9442 0.0053 286.3);
   --popover-foreground: oklch(0.1557 0.0108 276.2);
 
-  --primary: oklch(0.1557 0.0108 276.2);
-  --primary-foreground: oklch(0.994 0 0);
+  --primary: oklch(0.9442 0.0053 286.3);
+  --primary-foreground: oklch(0.5557 0.0108 276.2);
 
   --secondary: oklch(0.9214 0.1093 121.69);
   --secondary-foreground: oklch(0.2478 0.0314 170.89);
@@ -203,5 +203,10 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+@layer utilities {
+  .check-border {
+    @apply border border-red-500;
   }
 }
