@@ -1,4 +1,5 @@
 import ThemeSwitcher from '@/components/misc/themeswitcher';
+import { Button } from '@/components/ui/button';
 export default function Home() {
   return (
     <main className='flex h-full flex-col justify-between'>
@@ -9,7 +10,11 @@ export default function Home() {
           <h1 className='font-mono text-lg/loose'>Heading-18</h1>
           <h1 className='font-mono text-base/loose'>Heading-16</h1>
         </div>
-
+        <div className='w-full'>
+          <Button className='' variant='reversed'>
+            Button
+          </Button>
+        </div>
         <div className='pr-5'>
           <ThemeSwitcher />
         </div>
