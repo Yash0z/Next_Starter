@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { GeistMono } from 'geist/font/mono';
 import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
@@ -20,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
-        className={`${Nacelle.variable} no-scrollbar h-screen w-screen bg-background font-nacelle antialiased`}
+        className={`${Nacelle.variable} ${GeistMono.variable} no-scrollbar h-screen w-screen bg-background font-nacelle antialiased`}
       >
         <ThemeProvider
           attribute='class'

@@ -6,7 +6,8 @@
 
 @theme inline {
   /* fonts */
-  --font-nacelle: var(--font-Nacelle);
+  --font-sans: var(--font-Nacelle);
+  --font-monospace: var(--font-geist-mono);
   /* fonts */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
